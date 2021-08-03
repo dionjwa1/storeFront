@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Link } from 'react-router-dom';
 
 function Categories() {
     return (
@@ -8,7 +9,7 @@ function Categories() {
             <li>Games</li>
             <li>Books</li>
             <li>Spiders</li>
-
+<Link to='/'/>
             </div>
 
     )
