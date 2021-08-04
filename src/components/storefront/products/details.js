@@ -1,9 +1,12 @@
 import React from 'react'
+import { Button } from '@material-ui/core';
 
-function Details() {
+function Details(props) {
     return (
         <div>
-            <h3> Product Detail Coming Soon</h3>
+            <Button style={{ backgroundColor:'green' }} color= 'secondary' variant='contained'> Electronics</Button>
+
+            <Button color= 'secondary' variant='contained'> Food </Button>
         </div>
     )
 }
