@@ -1,33 +1,30 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Container, Navbar, Nav } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 
 function Header() {
     return (
         <>
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand to="#home">World's Greatest Online Store</Navbar.Brand>
-                    <Nav className="me-auto">
 
-                        <Nav.Link>
-                            <Link to='/'>Home</Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to='/categories'>Categories</Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to='/details'>Products</Link>
-                        </Nav.Link>
-
-                    </Nav>
-                </Container>
-            </Navbar>
-
-
-
+            <AppBar position="static">
+                <Toolbar variant="dense">
+                    <IconButton edge="start" color="inherit" aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
+                    <Button style={{ backgroundColor:'white' }}
+                        to="/categories">
+                        Categories
+                    </Button>
+                    <Typography variant="h3" color="green" style={{ backgroundColor:'red' }}>
+                        World's Greatest Online Store
+                    </Typography>
+                </Toolbar>
+            </AppBar>
 
         </>
     )

@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+// import { BrowserRouter as Link } from 'react-router-dom';
+import Header from './components/storefront/header/header'
+import Details from './components/storefront/products/details'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> This is my app!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+<Header />
+ <Details />
+    </>
   );
 }
 
