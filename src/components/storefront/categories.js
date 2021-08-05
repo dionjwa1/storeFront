@@ -1,18 +1,26 @@
-import React from 'react'
-import { BrowserRouter as Link } from 'react-router-dom';
-
-function Categories() {
-    return (
-        <div className='container'>
-            <h3 className='title'> Browse Our Categories </h3>
-            <ul className='list'></ul>
-            <li>Games</li>
-            <li>Books</li>
-            <li>Spiders</li>
-<Link to='/'/>
-            </div>
-
-    )
-}
-
-export default Categories;
+const initialState = {
+    list: [
+      {displayName: 'Electronics', normalizedName: 'electronics', description: 'things that require power'},
+      {displayName: 'Food', normalizedName: 'food', description: 'things that you eat'},
+    ],
+    activeCategory: '',
+  };
+  
+  function categoriesReducer(state = initialState, action) {
+    switch(action.type) {
+      case 'ACTIVATE_CATEGORY':
+        return {...state, activeCategory: action.payload};
+      default:
+        return state;
+    }
+  }
+  
+  export function activateCategory(categoryName) {
+    return {
+      type: 'ACTIVATE_CATEGORY',
+      payload: categoryName,
+    }
+  }
+  
+  
+  export default categoriesReducer;
